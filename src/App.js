@@ -24,7 +24,7 @@ function App() {
       <TabContent tabIndex={selectedTab} />
       <footer className="absolute bottom-3 right-5 flex items-center text-center font-semibold py-3 text-sm text-gray-700 dark:text-gray-300">
         <FaGithub className="text-xl mr-2" />
-        <a href="https://github.com/r-askarov" target="_blank" rel="noopener noreferrer" className="hover:underline">
+        <a href="https://github.com/r-askarov/portfolio" target="_blank" rel="noopener noreferrer" className="hover:underline">
           View Code
         </a>
       </footer>
