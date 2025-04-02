@@ -3,7 +3,7 @@ import React from "react";
 const TabBar = ({ onTabChange, selectedTab }) => {
   const tabs = [
     { id: 0, icon: "fas fa-user", label: "Profile" },
-    { id: 1, icon: "fas fa-file-alt", label: "Home" },
+    { id: 1, icon: "fas fa-file-alt", label: "Resume" },
     { id: 2, icon: "fas fa-info-circle", label: "Info" },
   ];
   
@@ -13,6 +13,7 @@ const TabBar = ({ onTabChange, selectedTab }) => {
         <button
           key={tab.id}
           onClick={() => onTabChange(tab.id)}
+          aria-label={tab.label}
           className={`flex flex-col items-center transition duration-300 ease-in-out hover:scale-95 text-white ${
             selectedTab === tab.id ? "text-blue-400" : "text-white"
           }`}
