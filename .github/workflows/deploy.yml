@@ -25,7 +25,7 @@ jobs:
         run: npm start &
 
       - name: Wait for server to be ready
-        run: sleep 5
+        run: sleep 10
 
       - name: Run Cypress Tests
         run: npm run cypress:run
