@@ -8,7 +8,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/preset-fountain": "^3.2.0",
     "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",
     "framer-motion": "^12.4.10",
@@ -16,6 +18,8 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
+    "react-typist": "^2.0.5",
+    "swiper": "^11.2.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -24,7 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -45,10 +51,13 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@cypress/webpack-dev-server": "^4.0.1",
     "autoprefixer": "^10.4.20",
+    "cypress": "^14.1.0",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "@babel/plugin-proposal-private-property-in-object": "7.21.11"
+    "webpack": "^5.98.0"
   }
 }

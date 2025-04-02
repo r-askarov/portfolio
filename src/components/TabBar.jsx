@@ -2,15 +2,13 @@ import React from "react";
 
 const TabBar = ({ onTabChange, selectedTab }) => {
   const tabs = [
-    { id: 0, icon: "fas fa-home", label: "Home" },
-    { id: 1, icon: "fas fa-search", label: "Search" },
-    { id: 2, icon: "fas fa-bell", label: "Notifications" },
-    { id: 3, icon: "fas fa-user", label: "Profile" },
+    { id: 0, icon: "fas fa-user", label: "Profile" },
+    { id: 1, icon: "fas fa-file-alt", label: "Home" },
+    { id: 2, icon: "fas fa-info-circle", label: "Info" },
   ];
-
   
   return (
-    <div className="w-[70%] rounded-3xl mt-8 bg-pink-800 dark:bg-blue-950 p-4 flex justify-around items-center shadow-2xl transition-colors duration-300">
+    <div className="w-[70%] md:w-[40%] rounded-3xl mt-8 bg-pink-800 dark:bg-blue-950 p-4 flex justify-around items-center shadow-2xl transition-colors duration-300">
       {tabs.map((tab) => (
         <button
           key={tab.id}

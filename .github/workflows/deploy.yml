@@ -5,7 +5,28 @@ on:
     branches:
       - main
 jobs:
+  test:
+    name: Run Cypress Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Run Cypress Tests
+        run: npm run cypress:run
+
   deploy:
+    name: Deploy to GitHub Pages
+    needs: test
     runs-on: ubuntu-latest
 
     steps:

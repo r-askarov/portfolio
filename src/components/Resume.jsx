@@ -6,7 +6,7 @@ const resumeSections = [
   { id: 2, title: "Skills", content: <Skills /> },
 ];
 
-const Home = () => {
+const Resume = () => {
   const [selectedSection, setSelectedSection] = useState(0);
 
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <select
         value={selectedSection}
         onChange={(e) => setSelectedSection(Number(e.target.value))}
-        className="w-52 p-2 rounded-md border-gray-300 dark:border-gray-600 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md text-gray-900 dark:text-gray-100 shadow-lg"
+        className="w-44 p-2 rounded-md border-gray-300 dark:border-gray-600 bg-white/30 dark:bg-gray-600/30 backdrop-blur-md text-gray-900 dark:text-gray-100 shadow-lg"
       >
         {resumeSections.map((section) => (
           <option key={section.id} value={section.id}>
@@ -32,8 +32,7 @@ const Home = () => {
   );
 };
 
-export default Home;
-
+export default Resume;
 
 // Resume section components
 function Education() {
@@ -70,8 +69,12 @@ function WorkExperience() {
       <h3 className="text-lg font-semibold">💼 Software Engineer</h3>
       <p>Avenica, Inc. (2022-Present)</p>
       <ul className="list-disc ml-5 mt-2">
-        <li className="mb-2">iOS application development using MVVM architecture in Swift & SwiftUI, integration of mobile app and Google Firebase and deployment to Apple's TestFlight</li>
-        <li>Development of full-stack, dynamic and interactive web applications using React with reusable and modular components and an Express.js backend. Includes deployment to VPS (Nginx and Apache).</li>
+        <li className="mb-2">Developing iOS applications using Swift and SwiftUI, following MVVM architecture for maintainable and scalable code.</li>
+        <li className="mb-2">Integrating mobile applications with Google Firebase for authentication, database storage, and real-time updates.</li>
+        <li className="mb-2">Deploying and managing iOS applications through Apple's TestFlight for beta testing and iterative improvements.</li>
+        <li className="mb-2">Building dynamic and interactive web applications using React, leveraging reusable and modular component-based design.</li>
+        <li className="mb-2">Developing full-stack solutions with an Express.js backend, implementing RESTful APIs and handling server-side logic.</li>
+        <li className="mb-2">Deploying web applications to Virtual Private Servers (VPS) using Nginx and Apache, ensuring optimal performance and security.</li>
       </ul>
     </div>
   );
@@ -81,13 +84,13 @@ function Skills() {
   return (
     <div>
       <h3 className="text-lg font-semibold">🛠 Technical Skills</h3>
-      <ul className="list-disc ml-10">
-        <li>College level coursework and extensive experience with various programming languages such as Python, Java, C, and C++</li>
-        <li>Development in Linux environments</li>
-        <li>iOS application development and UI design</li>
-        <li>Web development with JavaScript/TypeScript frameworks (React, Next.js, Angular)</li>
-        <li>SQL database design, modeling, and integration with apps</li>
-        <li>Understanding of Version Control (Git)</li>
+      <ul className="list-disc ml-5 mt-2">
+        <li className="mb-2">College level coursework and extensive experience with various programming languages such as Python, Java, C, and C++</li>
+        <li className="mb-2">Development in Linux environments</li>
+        <li className="mb-2">iOS application development and UI design</li>
+        <li className="mb-2">Web development with JavaScript/TypeScript frameworks (React, Next.js, Angular)</li>
+        <li className="mb-2">SQL database design, modeling, and integration with apps</li>
+        <li className="mb-2">Understanding of Version Control (Git)</li>
       </ul>
     </div>
   );
