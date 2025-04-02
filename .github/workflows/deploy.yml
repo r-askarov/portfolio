@@ -21,8 +21,17 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Start server
+        run: npm start
+
+      - name: Wait for server to be ready
+        run: sleep 5
+
       - name: Run Cypress Tests
         run: npm run cypress:run
+
+      - name: Stop Server
+        run: pkill -f "npm start"
 
   deploy:
     name: Deploy to GitHub Pages
