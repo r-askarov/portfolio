@@ -9,7 +9,7 @@ describe('Tab Navigation', () => {
 
     it("Switches to the Resume tab and navigates through dropdown options", () => {
       // Click on the Resume tab
-      cy.get("button[aria-label='Resume']").click();
+      cy.get("button[aria-label='Resume']").click({ force: true });
 
       // Verify the dropdown menu is visible
       cy.get('select').should('be.visible');

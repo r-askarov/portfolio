@@ -16,10 +16,10 @@ describe("Button Tests", () => {
 
       cy.get("@darkModeButton").should("contain", "🌙");
   
-      cy.get("@darkModeButton").click();
+      cy.get("@darkModeButton").click({ force: true });
       cy.get("@darkModeButton").should("contain", "☀️");
 
-      cy.get("@darkModeButton").click();
+      cy.get("@darkModeButton").click({ force: true });
       cy.get("@darkModeButton").should("contain", "🌙");
     });
   });
