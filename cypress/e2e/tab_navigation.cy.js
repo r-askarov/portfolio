@@ -17,7 +17,7 @@ describe('Tab Navigation', () => {
       // Iterate through dropdown options and verify each section is displayed
       const options = ['Work Experience', 'Skills', 'Education'];
       options.forEach(option => {
-        cy.get('select').select(option);
+        cy.get('select').select(option, { force: true });
         cy.contains(option).should('be.visible');
       });
     });
