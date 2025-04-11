@@ -35,8 +35,8 @@ function App() {
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
-
-        <TabContent tabIndex={selectedTab} />
+        
+        {selectedTab === 2 ? <TabContent tabIndex={selectedTab} hidden={true} />  : <TabContent tabIndex={selectedTab} /> }
 
         <footer className="md:absolute bottom-3 right-5 flex items-center text-center font-semibold py-3 text-sm text-gray-700 dark:text-gray-300">
           <FaGithub className="text-xl mr-2" />
