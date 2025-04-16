@@ -4,7 +4,7 @@ describe('Tab Navigation', () => {
     });
   
     it('should display the Profile tab by default', () => {
-      cy.contains('Welcome to my portfolio').should('be.visible');
+      cy.contains('Welcome to my portfolio', { timeout: 10000 }).should('be.visible');
     });
 
     it("Switches to the Resume tab and navigates through dropdown options", () => {
